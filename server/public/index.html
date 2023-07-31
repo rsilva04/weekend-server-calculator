@@ -1,24 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Weekend-Server-Calculator</title>
-  <link href="styles/styles.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Server Side Caluculator</title>    
 </head>
-<body>
-    <h1>Weekend Calculator</h1>
+<header>
+    <h1>Weekend Server Calculator</h1>
+</header>
 
-    <input type="text" id="num1" value="" placeholder="Number 1">
+<br>
+
+<body>
+
+    <input id="firstNumber" type="text" placeholder="First Number"/>
     <button type="button" onclick="addition()">+</button>
     <button type="button" onclick="subtraction()">-</button>
     <button type="button" onclick="multiplcation()">*</button>
     <button type="button" onclick="division()">/</button>
-    <input type="text" id="num2" value="" placeholder="Number 2">
-    <button type="button" onclick="newInputs()">=</button>
-    <button type="button" onclick="clearValue()">C</button>
+    <input id="secondNumber" type="text" placeholder="Second Number"/>
+    <button type="button" onclick="answer()">=</button>
+    <button type="button" onclick="clearCalculator()">C</button>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
-  <script src="scripts/client.js" charset="utf-8"></script>
-  </script>
+    <br>
+    <br>
+
+    <h2>
+        <div id="result">0</div>
+    </h2>
+
+    <div id="history">
+        <ul>
+        </ul>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="scripts/client.js"></script>
 </body>
 </html>
